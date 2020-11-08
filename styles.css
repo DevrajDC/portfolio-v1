@@ -367,7 +367,7 @@ nav .nav-links {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
-}
+}  
 .trainings {
   padding: 20px;
   box-sizing: border-box;
