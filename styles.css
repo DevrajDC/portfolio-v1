@@ -222,20 +222,21 @@ nav .nav-links {
   text-align: center;
   font-weight: 800;
 }
+
 .experience-container {
   max-width: 1000px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  padding: 0 20px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  
 }
 .experience {
   padding: 20px;
-  margin-bottom: 20px;
   box-sizing: border-box;
   background-color: #2d3748;
   border-radius: 8px;
-  width: 45%;
 }
 .experience h3 {
   color: white;
@@ -244,10 +245,10 @@ nav .nav-links {
 .experience p {
   color: #8592a4;
 }
-@media (max-width: 900px) {
+@media (max-width: 450px) {
   .experience-container {
-    display: block;
-    margin: 0 20px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
   }
   .experience {
     width: 100%;
@@ -360,19 +361,18 @@ nav .nav-links {
   font-weight: 800;
 }
 .trainings-container {
-  max-width: 1000px;
+  max-width: 1240px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  padding: 0 20px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
 }
 .trainings {
   padding: 20px;
-  margin-bottom: 20px;
   box-sizing: border-box;
   background-color: #2d3748;
   border-radius: 8px;
-  width: 45%;
 }
 .trainings h3 {
   color: white;
@@ -381,10 +381,10 @@ nav .nav-links {
 .trainings p {
   color: #8592a4;
 }
-@media (max-width: 900px) {
+@media (max-width: 840px) {
   .trainings-container {
-    display: block;
-    margin: 0 20px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
   }
   .trainings {
     width: 100%;
