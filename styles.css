@@ -785,14 +785,11 @@ form {
   bottom: 32px;
   pointer-events: auto;
   opacity: 1;
-  transform: translateY(-120px);
+  transform: translateY(-55px);
 }
 @media (max-width: 789px) {
   .scrollUp {
-    right: 20px;
-    font-size: 1.5rem;
-    height: 50px;
-    width: 50px;
+    display: none;
   }
 }
 
