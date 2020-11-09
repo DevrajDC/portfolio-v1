@@ -399,19 +399,19 @@ window.addEventListener('scroll',e => {
   if(window.scrollY > document.querySelector('#home').offsetTop){
     highlight(document.querySelector('.nav-links li:nth-child(1) a'), document.querySelector('.bottom-navbar a:nth-child(1)'));
   }
-  if(window.scrollY > document.querySelector('#about').offsetTop){
+  if(window.scrollY > document.querySelector('#about').offsetTop - 100){
     highlight(document.querySelector('.nav-links li:nth-child(2) a'), document.querySelector('.bottom-navbar a:nth-child(1)'));
   }
-  if(window.scrollY > document.querySelector('#Experience').offsetTop){
+  if(window.scrollY > document.querySelector('#Experience').offsetTop - 100){
     highlight(document.querySelector('.nav-links li:nth-child(3) a'), document.querySelector('.bottom-navbar a:nth-child(2)'));
   }
-  if(window.scrollY > document.querySelector('#skills').offsetTop){
+  if(window.scrollY > document.querySelector('#skills').offsetTop - 100){
     highlight(document.querySelector('.nav-links li:nth-child(4) a'), document.querySelector('.bottom-navbar a:nth-child(3)'));
   }
-  if(window.scrollY > document.querySelector('#portfolio').offsetTop){
+  if(window.scrollY > document.querySelector('#portfolio').offsetTop - 100){
     highlight(document.querySelector('.nav-links li:nth-child(5) a'), document.querySelector('.bottom-navbar a:nth-child(4)'));
   }
-  if(window.scrollY > document.querySelector('#contact').offsetTop){
+  if(window.scrollY > document.querySelector('#contact').offsetTop - 100){
     highlight(document.querySelector('.nav-links li:nth-child(6) a'), document.querySelector('.bottom-navbar a:nth-child(4)'));
   }
 })
