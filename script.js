@@ -341,6 +341,9 @@ document.querySelectorAll(".project-btn").forEach((elem) => {
   });
 });
 
+
+// document.querySelector(".nav-links li:nth-child(1) a").style.color =
+//       "white";
 // window.addEventListener("scroll", () => {
 //   console.log(window.scrollY);
 //   if (window.scrollY >= 0 && window.scrollY <= 816)
@@ -376,3 +379,39 @@ document.querySelectorAll(".project-btn").forEach((elem) => {
 
 //   document.querySelectorAll(".nav-links li a").forEach((elem, index) => {});
 // });
+
+function unhighlight() {
+  document.querySelectorAll('.nav-links li').forEach(item => {
+    item.querySelector('a').style.color = '#8592a4';
+  })
+  document.querySelectorAll('.bottom-navbar a').forEach(item => {
+    item.style.color = '#8592a4';
+  })
+}
+function highlight(elem1, elem2) {
+  unhighlight();
+  elem1.style.color = 'white';
+  elem2.style.color = 'white';
+}
+highlight(document.querySelector('.nav-links li:nth-child(1) a'), document.querySelector('.bottom-navbar a:nth-child(1)'));
+window.addEventListener('scroll',e => {
+  // console.log(window.scrollY, document.querySelector('#Experience').offsetTop);
+  if(window.scrollY > document.querySelector('#home').offsetTop){
+    highlight(document.querySelector('.nav-links li:nth-child(1) a'), document.querySelector('.bottom-navbar a:nth-child(1)'));
+  }
+  if(window.scrollY > document.querySelector('#about').offsetTop - 100){
+    highlight(document.querySelector('.nav-links li:nth-child(2) a'), document.querySelector('.bottom-navbar a:nth-child(1)'));
+  }
+  if(window.scrollY > document.querySelector('#Experience').offsetTop - 100){
+    highlight(document.querySelector('.nav-links li:nth-child(3) a'), document.querySelector('.bottom-navbar a:nth-child(2)'));
+  }
+  if(window.scrollY > document.querySelector('#skills').offsetTop - 100){
+    highlight(document.querySelector('.nav-links li:nth-child(4) a'), document.querySelector('.bottom-navbar a:nth-child(3)'));
+  }
+  if(window.scrollY > document.querySelector('#portfolio').offsetTop - 100){
+    highlight(document.querySelector('.nav-links li:nth-child(5) a'), document.querySelector('.bottom-navbar a:nth-child(4)'));
+  }
+  if(window.scrollY > document.querySelector('#contact').offsetTop - 100){
+    highlight(document.querySelector('.nav-links li:nth-child(6) a'), document.querySelector('.bottom-navbar a:nth-child(4)'));
+  }
+})

@@ -24,6 +24,12 @@ body {
   border-radius: 10px;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 8vh;
+  }
+}
+
 /*********************** NAVBAR *****************************/
 nav {
   display: flex;
@@ -789,10 +795,7 @@ form {
 }
 @media (max-width: 789px) {
   .scrollUp {
-    right: 20px;
-    font-size: 1.5rem;
-    height: 50px;
-    width: 50px;
+    display: none;
   }
 }
 
@@ -810,4 +813,45 @@ form {
 }
 #skills .container {
   padding: 80px 20px 0;
+}
+
+/*******************Bottom Nav Bar*******************/
+
+.bottom-navbar {
+  color: #8592a4;
+  background-color: #2d3748;
+  min-height: 8vh;
+  width: 100%;
+  position: fixed;
+  margin: auto;
+  bottom: 0;left: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
+  z-index: 2;
+}
+
+.bottom-navbar a {
+  font-size: 0.8em !important;
+}
+
+.bottom-navbar i, .bottom-navbar a {
+  text-decoration: none;
+  font-size: 1.7em;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 360px) {
+  .bottom-navbar a {
+    font-size: 0.6em !important;
+  }
+  .bottom-navbar i {
+    font-size: 1.5em !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .bottom-navbar {
+    display: none;
+  }
 }
