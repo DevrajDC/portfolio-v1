@@ -24,6 +24,12 @@ body {
   border-radius: 10px;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 8vh;
+  }
+}
+
 /*********************** NAVBAR *****************************/
 nav {
   display: flex;
@@ -833,6 +839,15 @@ form {
   font-size: 1.7em;
   margin: auto;
   text-align: center;
+}
+
+@media (max-width: 360px) {
+  .bottom-navbar a {
+    font-size: 0.6em !important;
+  }
+  .bottom-navbar i {
+    font-size: 1.5em !important;
+  }
 }
 
 @media (min-width: 768px) {
