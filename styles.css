@@ -88,6 +88,19 @@ nav .nav-links {
   transition: all 0.3s ease;
 }
 
+.nav-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  top: 0;left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
 @media screen and (max-width: 1024px) {
   nav .nav-links {
     width: 50%;
@@ -102,16 +115,29 @@ nav .nav-links {
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 92vh;
+    height: fit-content;
     top: 8vh;
     background-color: #2d3748;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70% !important;
-    transform: translateX(100%);
+    width: 100% !important;
+    transform: translateY(-150%);
     transition: transform 0.5s ease-in;
+    z-index: -4;
+    padding: 20px 0;
   }
+
+  .nav-cover {
+    position: absolute;
+    margin: auto;top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2d3748;
+    z-index: -3;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+  }
+
   .nav-links a {
     font-size: 20px;
     padding: 10px 30px;
@@ -119,12 +145,18 @@ nav .nav-links {
 
   .nav-links li {
     position: relative;
-    opacity: 1;
-    transform: translateX(100vw);
+    opacity: 0;
+    transition-delay: 0.3s;
+    margin-bottom: 14px;
   }
 
   .nav-links li.nav-active {
-    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .nav-overlay.nav-active {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .burger {
